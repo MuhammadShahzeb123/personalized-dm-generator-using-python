@@ -25,7 +25,7 @@ def extract_data(csv_data):
     return extracted_data
 
 def gemeni(prompt: str) -> str:
-    genai.configure(api_key="YOU API KEY") # get the API key from https://makersuite.google.com/app/apikey . It is FREE
+    genai.configure(api_key="YOU_API_KEY") # get the API key from https://makersuite.google.com/app/apikey . It is FREE
 
     model = genai.GenerativeModel(
         model_name="gemini-pro",
