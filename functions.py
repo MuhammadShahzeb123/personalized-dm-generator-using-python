@@ -29,7 +29,7 @@ def extract_data(csv_data):
     return extracted_data
 
 def gemeni(prompt: str) -> str:
-    genai.configure(api_key="AIzaSyD3vxgqoQcR-UEM437ipnhnIFPLW_8r7r4") # get the API key from https://makersuite.google.com/app/apikey . It is FREE YOU_API_KEY
+    genai.configure(api_key="YOU_API_KEY") # get the API key from https://makersuite.google.com/app/apikey . It is FREE YOU_API_KEY
 
     model = genai.GenerativeModel(
         model_name="gemini-pro",
