@@ -3,10 +3,14 @@ import google.generativeai as genai
 import csv
 
 
-def read_csv(file_path):
+def read_csv2(file_path):
     with open(file_path, 'rb') as csvfile:
         csv_reader = unicodecsv.DictReader(csvfile)
         return list(csv_reader)
+
+def read_csv(file_object):
+    csv_reader = unicodecsv.DictReader(file_object)
+    return list(csv_reader)
 
 def extract_data(csv_data):
     extracted_data = []
@@ -25,7 +29,7 @@ def extract_data(csv_data):
     return extracted_data
 
 def gemeni(prompt: str) -> str:
-    genai.configure(api_key="YOU_API_KEY") # get the API key from https://makersuite.google.com/app/apikey . It is FREE
+    genai.configure(api_key="AIzaSyD3vxgqoQcR-UEM437ipnhnIFPLW_8r7r4") # get the API key from https://makersuite.google.com/app/apikey . It is FREE YOU_API_KEY
 
     model = genai.GenerativeModel(
         model_name="gemini-pro",

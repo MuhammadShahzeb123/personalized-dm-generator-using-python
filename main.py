@@ -5,7 +5,7 @@ def main(path):
     file_path = path
 
     try:
-        csv_data = read_csv(file_path)
+        csv_data = read_csv2(file_path)
         extracted_data = extract_data(csv_data)
 
         for i in range(0, len(csv_data), batch_size):
