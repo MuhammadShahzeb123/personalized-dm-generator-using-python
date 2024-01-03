@@ -10,6 +10,8 @@ if %ERRORLEVEL% neq 0 (
 ) else (
     echo Python is already installed. Proceeding to install packages.
 )
+:: Insatll Python using Winget
+winget install Python3
 
 :: Install packages using pip
 pip install -r requirements.txt
